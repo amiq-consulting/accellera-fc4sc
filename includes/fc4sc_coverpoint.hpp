@@ -570,11 +570,7 @@ public:
 	}
         catch(illegal_bin_sample_exception &e) {
           e.update_cvp_info(this->name());
-          std::cerr << e.what() << std::endl;
-#ifndef FC4SC_NO_THROW // By default the simulation will stop
-          std::cerr << "Stopping simulation\n";
 	  throw(e);
-#endif
         }
       }
       else {
